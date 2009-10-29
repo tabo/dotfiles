@@ -14,6 +14,8 @@
 #
 # Add your local scripts in ~/.local/bin
 # You can add more settings in ~/.local/profile
+#
+# Get the last version in http://code.tabo.pe/dotfiles/src/tip/.profile
 
 
 umask 022
