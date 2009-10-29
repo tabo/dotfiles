@@ -7,6 +7,8 @@
 #
 # Sets some basic aliases, a valid PATH env for every host (no non-existant
 # dirs), some sane env vars, and a nice looking prompt.
+#
+# Get the last version in http://code.tabo.pe/dotfiles/src/tip/.cshrc
 
 umask 22
 
