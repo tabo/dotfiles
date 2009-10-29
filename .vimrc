@@ -1,8 +1,8 @@
 " File:        .vimrc
-" Author:      Gustavo Picon <'%s@%s.%s' % ('tabo', 'gpicon', 'org')>
+" Author:      Gustavo Picon <tabo@tabo.pe>
 " Last Change: 2009 Apr 12 (Vim 7.1)
-" Download:    http://static.gpicon.org/code/vimrc.html
-" Home:        http://gpicon.org
+" Download:    http://code.tabo.pe/dotfiles/src/tip/.vimrc
+" Home:        http://tabo.pe/
 " License:     This file is placed in the publid domain
 " Disclaimer:  Published as-is, no support, no warranty
 
