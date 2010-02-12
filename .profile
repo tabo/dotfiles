@@ -26,6 +26,9 @@ alias f='finger'
 alias h='history'
 alias j='jobs -l'
 alias ls='ls -F'
+alias egrep='egrep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias grep='grep --color=auto'
 
 # set the $PATH env, it will add only directories that actually exist in the
 # system, so it's safe to add more and more dirs to the array
