@@ -1,9 +1,9 @@
 " File:        .vimrc
 " Author:      Gustavo Picon <tabo@tabo.pe>
-" Last Change: 2009 Apr 12 (Vim 7.1)
+" Last Change: 2010 Feb 19 (Vim 7.2)
 " Download:    http://code.tabo.pe/dotfiles/src/tip/.vimrc
 " Home:        http://tabo.pe/
-" License:     This file is placed in the publid domain
+" License:     This file is placed in the public domain
 " Disclaimer:  Published as-is, no support, no warranty
 
 
@@ -45,12 +45,13 @@ if has('syntax') && (&t_Co > 2 || has('win32') || has('gui_running'))
     "endif
 
     if has('gui_running')
-        colorscheme twilight
+        colorscheme koehler
+        set bg=dark
     "elseif &t_Co == 256
     "    colorscheme oceanblack256
     else
         " gah, fall back
-        colorscheme elflord
+        colorscheme koehler
     endif
 
 endif
@@ -248,8 +249,9 @@ if has('gui_running')
     set guioptions-=T          " remove the toolbar
     set guioptions+=a          " 
     set lines=999
+    set columns=80
     if has("mac")
-        set guifont=Monaco:h14
+        set guifont=Monaco:h12
     elseif has("unix")
         set guifont=Monospace\ 12
     elseif has("win32") || has("win64")
