@@ -216,17 +216,7 @@ set nobackup
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 let g:netrw_list_hide="\.pyc$,\.swp$,\.bak$,^\.svn/$"
-" tree style
-"let g:netrw_liststyle=3
-" F11 to open the work directory
-nmap <silent> <F11> :Explore<CR>
-map <leader>f :Explore<CR>
 
-" press F11 to toggle the project sidebar
-"nmap <silent> <F11> <Plug>ToggleProject
-"let g:proj_flags="mst"
-
-map <leader>t :NERDTree<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "
