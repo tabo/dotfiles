@@ -45,8 +45,7 @@ if has('syntax') && (&t_Co > 2 || has('win32') || has('gui_running'))
     "endif
 
     if has('gui_running')
-        colorscheme koehler
-        set bg=dark
+        colorscheme fruity
     "elseif &t_Co == 256
     "    colorscheme oceanblack256
     else
@@ -177,19 +176,12 @@ set hlsearch
 "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-autocmd FileType c,cpp call <SID>cstuff()
-function <SID>cstuff()
-    set cindent
-    set formatoptions+=croql
-    set formatoptions-=t
-endfunction
+autocmd FileType c,cpp setlocal cindent formatoptions+=croql formatoptions-=t
 
-autocmd FileType python call <SID>pystuff()
-function <SID>pystuff()
-    set foldmethod=indent
-    set foldlevel=999999
-    set smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class,with
-endfunction
+autocmd FileType python setlocal expandtab shiftwidth=4 tabstop=8 softtabstop=4 smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class,with foldmethod=indent foldlevel=99999
+let python_highlight_all=1
+let python_highlight_exceptions=0
+let python_highlight_builtins=0
 
 " I have been working with cobol lately, the horror
 au BufNewFile,BufRead *.CBL,*.cbl,*.cob     setf cobol
@@ -242,7 +234,7 @@ if has('gui_running')
     set lines=999
     set columns=80
     if has("mac")
-        set guifont=Monaco:h12
+        set guifont=Menlo:h12
     elseif has("unix")
         set guifont=Monospace\ 12
     elseif has("win32") || has("win64")
