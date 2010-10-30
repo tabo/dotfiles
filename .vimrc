@@ -45,12 +45,14 @@ if has('syntax') && (&t_Co > 2 || has('win32') || has('gui_running'))
     "endif
 
     if has('gui_running')
-        colorscheme fruity
+        "colorscheme fruity
+        colorscheme default
     "elseif &t_Co == 256
     "    colorscheme oceanblack256
     else
         " gah, fall back
-        colorscheme koehler
+        "colorscheme koehler
+        colorscheme default
     endif
 
 endif
@@ -234,7 +236,7 @@ if has('gui_running')
     set lines=999
     set columns=80
     if has("mac")
-        set guifont=Menlo:h12
+        set guifont=Menlo\ Regular:h11
     elseif has("unix")
         set guifont=Monospace\ 12
     elseif has("win32") || has("win64")
