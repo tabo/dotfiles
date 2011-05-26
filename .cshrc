@@ -27,11 +27,12 @@ setenv LANG en_US.UTF-8
 # system, so it's safe to add more and more dirs to the array
 set path = ()
 foreach d (~/bin ~/.local/bin \
-           /opt/local/{sbin,bin} \
-           /usr/gnu/bin \
+           /opt/local/sbin /opt/local/bin /usr/gnu/bin \
+           /ffp/sbin /ffp/bin \
            /sbin /bin \
-           /usr/{sbin,bin,local/sbin,local/bin,X11R6/bin,X11/bin,games} \
-           /usr/{usb,opt/bin,pkg/sbin,pkg/bin} )
+           /usr/sbin /usr/bin /usr/local/sbin /usr/local/bin /usr/X11R6/bin \
+           /usr/X11/bin /usr/games \
+           /usr/usb /usr/opt/bin /usr/pkg/sbin /usr/pkg/bin )
     if (-d $d) then
         set path = (${path} ${d})
     endif
@@ -108,3 +109,7 @@ endif
 
 # no annoyances
 mesg n
+
+if (-r "~/.local/cshrc") then
+    source "~/.local/cshrc"
+endif
