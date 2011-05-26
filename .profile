@@ -48,7 +48,7 @@ set_path $HOME/bin $HOME/.local/bin \
          /opt/local/sbin /opt/local/bin /usr/gnu/bin \
          /ffp/sbin /ffp/bin \
          /sbin /bin \
-         /usr/sbin /usr/bin /usr/local/sbin /usr/local/bin /usr/X11R6/bin \
+         /usr/local/sbin /usr/local/bin /usr/sbin /usr/bin /usr/X11R6/bin \
          /usr/X11/bin /usr/games \
          /usr/usb /usr/opt/bin /usr/pkg/sbin /usr/pkg/bin
 
