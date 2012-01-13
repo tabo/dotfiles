@@ -2,7 +2,7 @@
 #
 # .profile
 #
-# Gustavo Picon - 1999-2009
+# Gustavo Picon - 1999-2012
 #
 # This works with bash, zsh, pdksh, ksh88, ksh93, ash, dash, sh
 # in OS X, RHEL, FreeBSD, OpenBSD, SunOS, Solaris, HP-UX  and Ubuntu
@@ -29,6 +29,7 @@ alias ls='ls -F'
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias grep='grep --color=auto'
+alias _pycleanjunk="find . -name '*.pyc' -or -name '*.orig' -or -name '*.swp' -or -name '*.swo' -or -name '*.log' -or -name Pyro_log -or -name '*.egg-info' | xargs rm -vRf"
 
 # set the $PATH env, it will add only directories that actually exist in the
 # system, so it's safe to add more and more dirs to the array
