@@ -12,7 +12,7 @@
 " we like security
 set nomodeline
 
-" abbrev. of messages (avoids 'hit enter')
+" abbrev. of messages
 set shortmess+=a
 
 " display the current mode
@@ -38,6 +38,12 @@ set textwidth=79
 
 " wrap long lines
 set wrap
+
+set nobackup
+
+" show partial commands in status line and selected characters/lines in
+" visual mode
+set showcmd
 
 " The default statusline in janus is pretty bad, improve it
 if has("statusline")
