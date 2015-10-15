@@ -12,7 +12,7 @@
 " we like security
 set nomodeline
 
-" abbrev. of messages
+" abbrev. of messages (avoids 'hit enter')
 set shortmess+=a
 
 " display the current mode
