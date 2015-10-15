@@ -25,7 +25,9 @@ set scrolloff=2
 set nonumber
 
 " also ignore these while opening and filtering
-set wildignore+=.hg,*.pyc
+set wildignore+=.hg,*.pyc,.tox
+set wildignore+=/Users/tabo/repos/G/gryphon/env
+set wildignore+=/Users/tabo/repos/G/gryphon/services
 
 " a tab is 4 spaces
 set tabstop=4
@@ -89,6 +91,11 @@ if has('gui_running')
     " remove the toolbar
     set guioptions-=T
 
+    set guifont=Source\ Code\ Pro:h14
+
+    set background=light
+    colorscheme solarized
+
     " highlight the current line
     set cursorline
 
@@ -99,9 +106,25 @@ if has('gui_running')
 
 else
     " disable janus cmd/ctrl-t mappings for ctrlp.vim
-    unmap <C-t>
-    iunmap <C-t>
+    "unmap <C-t>
+    "iunmap <C-t>
 endif
+
+" move between windows
+map <silent><C-h> <C-w>h
+map <silent><C-j> <C-w>j
+map <silent><C-k> <C-w>k
+map <silent><C-l> <C-w>l
+
+
+function! AutoPep8()
+    :execute "! autopep8 -i -p 9999 -v " . bufname('%')
+endfunction
+noremap <silent><F4> :call AutoPep8()<CR>
+
+noremap <silent><F5> :lprev<CR>
+noremap <silent><F6> :lnext<CR>
+
 
 " to please the gods
 iabbrev cthuf Ia! Ia! Cthulhu fhtagn! Ph'nglui mglw'nafh Cthulhu R'lyeh wgah'nagl fhtagn! Cthulhu fhtagn! Cthulhu fhtagn!
