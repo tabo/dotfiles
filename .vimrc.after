@@ -26,8 +26,6 @@ set nonumber
 
 " also ignore these while opening and filtering
 set wildignore+=.hg,*.pyc,.tox
-set wildignore+=/Users/tabo/repos/G/gryphon/env
-set wildignore+=/Users/tabo/repos/G/gryphon/services
 
 " a tab is 4 spaces
 set tabstop=4
