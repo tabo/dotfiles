@@ -30,7 +30,7 @@ alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias grep='grep --color=auto'
 alias _pycleanjunk="find . -name '*.pyc' -or -name '*.orig' -or -name '*.swp' -or -name '*.swo' -or -name '*.log' -or -name Pyro_log -or -name '*.egg-info' | xargs rm -vRf"
-alias pyupgrade='pip list -o | cut -f 1 -d " " | xargs pip install -U'
+alias tailess='less --follow-name +F'
 
 # set the $PATH env, it will add only directories that actually exist in the
 # system, so it's safe to add more and more dirs to the array
@@ -62,7 +62,7 @@ alternates() {
 }
 EDITOR=$(alternates vim vi)
 PAGER=$(alternates less more)
-LESS=gi
+LESS=-R
 HISTCONTROL=ignoreboth
 BLOCKSIZE=K
 LC_ALL=en_US.UTF-8
