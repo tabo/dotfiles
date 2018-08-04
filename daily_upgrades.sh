@@ -3,6 +3,7 @@
 set -x
 
 PATH=$HOME/.local/bin:/sbin:/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:$HOME/.local/go/bin
+GOPATH="$HOME/.local/go"
 GOBIN="$HOME/.local/bin/go"
 
 brew update
