@@ -26,9 +26,6 @@ alias f='finger'
 alias h='history'
 alias j='jobs -l'
 alias ls='ls -F'
-alias egrep='egrep --color=auto'
-alias fgrep='fgrep --color=auto'
-alias grep='grep --color=auto'
 alias _pycleanjunk="find . -name '*.pyc' -or -name '*.orig' -or -name '*.swp' -or -name '*.swo' -or -name '*.log' -or -name Pyro_log -or -name '*.egg-info' | xargs rm -vRf"
 alias tailess='less --follow-name +F'
 
@@ -67,10 +64,14 @@ HISTCONTROL=ignoreboth
 BLOCKSIZE=K
 LC_ALL=en_US.UTF-8
 LANG=en_US.UTF-8
+GREP_OPTIONS='--color=auto'
+
+# enable terminal coloring in BSD/OS X
+CLICOLOR=1
 
 
 
-export PATH EDITOR PAGER LESS HISTCONTROL LC_ALL LANG BLOCKSIZE
+export PATH EDITOR PAGER LESS HISTCONTROL LC_ALL LANG BLOCKSIZE CLICOLOR GREP_OPTIONS
 
 
 # end non-interactive section
