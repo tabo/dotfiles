@@ -7,8 +7,7 @@ PATH=$HOME/.local/bin:/sbin:/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/b
 mas upgrade
 brew update
 brew upgrade
-pip2 list --format columns | tail -n +3 | cut -f 1 -d " " | xargs pip2 install -U
-pip3 list --format columns | tail -n +3 | cut -f 1 -d " " | xargs pip3 install -U
+python -m pip list --format columns | tail -n +3 | cut -f 1 -d " " | xargs python -m pip install -U
 
 $HOME/.cargo/bin/rustup update
 
